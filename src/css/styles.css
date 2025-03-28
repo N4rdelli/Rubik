@@ -1,5 +1,5 @@
 main {
-    background: linear-gradient(180deg, rgba(9,1,38,1) 35%, rgba(11,0,91,1) 100%);
+    background: linear-gradient(180deg, rgba(9,1,38,1) 25%, rgba(11,0,91,1) 100%);
     color: #fff;
 }
 
@@ -170,7 +170,7 @@ main {
 
 .prices-bg{
     background-color: #09012644;
-    margin: 6rem 0;
+    margin: 6rem 0 4rem 0;
     padding: 4rem 0;
 }
 
@@ -259,6 +259,45 @@ main {
 .prices-item a:hover{
     background-color: #fff;
     color: #09003E;
+}
+
+/* ---------------------------- Challenges --------------------------- */
+.challenges{
+    max-width: 85rem;
+    margin: 4rem auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.challenges-item {
+    flex: 1 1 300px;
+    margin: 2rem 0;
+    padding: 0 2rem;
+}
+
+.challenges-item h3{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.challenges-item h3::before {
+    content: ' ';
+    display: inline-block;
+    width: 0.5rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+}
+
+.challenges-item:nth-of-type(3n+1) h3::before {
+    background: #f00;
+}
+
+.challenges-item:nth-of-type(3n+2) h3::before{
+    background: #ff0;
+}
+
+.challenges-item:nth-of-type(3n+3) h3::before{
+    background: #00f;
 }
 
 /* ---------------------------- Footer --------------------------- */
