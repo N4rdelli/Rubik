@@ -1,5 +1,6 @@
 main {
-    background: linear-gradient(180deg, rgba(9,1,38,1) 25%, rgba(11,0,91,1) 100%);
+    /* background: linear-gradient(180deg, rgba(9,1,38,1) 25%, rgba(11,0,91,1) 100%); */
+    background-color: #090126;
     color: #fff;
 }
 
@@ -42,6 +43,7 @@ main {
     font-weight: 400;
     text-transform: none;
     font-size: 1.5rem;
+    color: #fff;
 }
 
 .menu-navigation a {
@@ -51,8 +53,8 @@ main {
     display: block;
 }
 
-.menu-navigation a:hover {
-    color: #5898ff;
+.menu a:hover {
+    color: #57c7ff;
 }
 
 .menu-navigation ul {
@@ -66,7 +68,7 @@ main {
 
 .hero {
     max-width: 85rem;
-    margin: 3rem auto;
+    margin: 2rem auto;
     padding: 0 2rem;
 
     display: flex;
@@ -81,7 +83,17 @@ main {
 }
 
 .hero img {
-    margin: 1rem 0;
+    margin: 1rem 0 0 0;
+    animation: rubiksCubeAnimation 3s infinite;
+}
+
+@keyframes rubiksCubeAnimation {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-0.8rem);
+    }
 }
 
 .hero p {
@@ -92,10 +104,13 @@ main {
 .about {
     max-width: 85rem;
     margin: 6rem auto;
-    padding: 0 2rem;
+    padding: 2rem 2rem;
 
     display: flex;
     flex-wrap: wrap;
+
+    border-top: 4px solid #6e22d9;
+    border-bottom: 4px solid #6e22d9;
 }
 
 .about-info {
@@ -109,6 +124,7 @@ main {
 
 .about-info p {
     margin: 1rem 1rem 1rem 0;
+    text-align: justify;
 }
 
 .about-img {
@@ -117,18 +133,19 @@ main {
 }
 
 .about-img img {
+    max-width: 18rem;
     margin: 0 auto;
 }
 
 /* ---------------------------- Products --------------------------- */
 
 .products {
-    max-width: 85rem;
-    margin: 4rem auto;
+    max-width: 75rem;
+    margin: 6rem auto;
     padding: 0 2rem;
 }
 
-.products-intro{
+.products-intro {
     width: 100%;
     max-width: 50rem;
     font-size: 1.5rem;
@@ -144,60 +161,68 @@ main {
     margin: 4rem 0;
 }
 
-.products-item{
+.products-item {
     flex: 1 1 175px;
+}
+
+.products-item img{
+    width: 100%;
 }
 
 .products-item h3 {
     font-size: 1.5rem;
-    background-color: #0b005b;
+    background-color: #0d0137;
     padding: 2rem 1rem;
 }
 
-.item1{
-    border-top: 8px solid #f00;
+.item1 {
+    border-top: 4px solid #f00;
 }
 
-.item2{
-    border-top: 8px solid #ffff00;
+.item2 {
+    border-top: 4px solid #ffff00;
 }
 
-.item3{
-    border-top: 8px solid #00f;
+.item3 {
+    border-top: 4px solid #00f;
 }
 
 /* ---------------------------- Price --------------------------- */
 
-.prices-bg{
-    background-color: #09012644;
-    margin: 6rem 0 4rem 0;
-    padding: 4rem 0;
-}
-
-.prices{
+.prices {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
     gap: 2rem;
-    
-    margin: 0 auto;
+
+    margin: 6rem auto;
+    padding: 0 2rem;
     max-width: 85rem;
 }
 
-.prices-item{
+.prices h2 {
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.prices p {
+    width: 100%;
+}
+
+.prices-item {
     flex: 1 1 260px;
-    border: 4px solid #00000022;
+    border: 4px solid #fff;
     padding: 2rem;
 }
 
-.prices-item h3{
+.prices-item h3 {
     font-size: 2rem;
     color: #ffffff66;
     text-align: center;
     margin-bottom: 1rem;
 }
 
-.prices-item span{
+.prices-item span {
     max-width: 300px;
     margin: 1rem auto;
     display: block;
@@ -205,22 +230,22 @@ main {
     text-align: center;
     font-weight: bold;
     padding: 0.6rem 0 0.3rem 0;
-    border-top: 4px solid #00000022;
-    border-bottom: 4px solid #00000022;
+    border-top: 4px solid #080123;
+    border-bottom: 4px solid #080123;
 }
 
-.prices-item sup{
+.prices-item sup {
     font-size: 1rem;
     margin-right: 0.5rem;
 }
 
-.prices-item ul{
+.prices-item ul {
     max-width: 300px;
     margin: 2rem auto;
     font-style: italic;
 }
 
-.prices-item li{
+.prices-item li {
     display: flex;
     color: #ffffff66;
     justify-content: space-between;
@@ -230,7 +255,7 @@ main {
     margin-bottom: 1rem;
 }
 
-.prices-item li::after{
+.prices-item li::after {
     content: ' ';
     display: block;
     width: 0.25rem;
@@ -256,13 +281,13 @@ main {
     transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.prices-item a:hover{
+.prices-item a:hover {
     background-color: #fff;
     color: #09003E;
 }
 
 /* ---------------------------- Challenges --------------------------- */
-.challenges{
+.challenges {
     max-width: 85rem;
     margin: 4rem auto;
     display: flex;
@@ -275,34 +300,100 @@ main {
     padding: 0 2rem;
 }
 
-.challenges-item h3{
+.challenges-item h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.challenges-item p {
+    text-align: justify;
 }
 
 .challenges-item h3::before {
     content: ' ';
     display: inline-block;
-    width: 0.5rem;
+    width: 4px;
     height: 2rem;
-    margin-right: 0.5rem;
+    margin-right: 0.8rem;
 }
 
 .challenges-item:nth-of-type(3n+1) h3::before {
     background: #f00;
 }
 
-.challenges-item:nth-of-type(3n+2) h3::before{
+.challenges-item:nth-of-type(3n+2) h3::before {
     background: #ff0;
 }
 
-.challenges-item:nth-of-type(3n+3) h3::before{
+.challenges-item:nth-of-type(3n+3) h3::before {
     background: #00f;
+}
+
+/* ---------------------------- Newsletter --------------------------- */
+
+.newsletter {
+    background: #0d0137;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.newsletter-info {
+    flex: 1 1 15rem;
+}
+
+.newsletter-info h2 {
+    font-size: 2rem;
+    font-style: italic;
+    max-width: 14rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter-info p {
+    font-style: italic;
+    max-width: 14rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter-form {
+    flex: 2 1 16rem;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.newsletter-form input {
+    flex: 3 1 16rem;
+    font-style: italic;
+    border: 2px solid #44b944;
+    background: transparent;
+    padding: 1rem 0.6rem;
+    margin: 0;
+}
+
+.newsletter-form button {
+    flex: 1 1 16rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #44b944;
+    color: #fff;
+    margin: 0;
+    cursor: pointer;
+    padding: 1rem 0.6rem;
 }
 
 /* ---------------------------- Footer --------------------------- */
 
 .footer {
-    background-color: #0b005b;
+    background-color: #0d0137;
+    padding: 0.5rem 2rem;
+}
+
+.footer p {
+    width: 100%;
+    text-align: center;
     color: #fff;
 }
