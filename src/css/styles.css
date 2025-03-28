@@ -1,5 +1,5 @@
 main {
-    background: linear-gradient(180deg, #090126 36%, #0b005b 100%);
+    background: linear-gradient(180deg, rgba(9,1,38,1) 35%, rgba(11,0,91,1) 100%);
     color: #fff;
 }
 
@@ -149,7 +149,7 @@ main {
 }
 
 .products-item h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     background-color: #0b005b;
     padding: 2rem 1rem;
 }
@@ -169,7 +169,7 @@ main {
 /* ---------------------------- Price --------------------------- */
 
 .prices-bg{
-    background-color: #0b005b;
+    background-color: #09012644;
     margin: 6rem 0;
     padding: 4rem 0;
 }
@@ -186,14 +186,15 @@ main {
 
 .prices-item{
     flex: 1 1 260px;
-    border: 4px solid #fff;
+    border: 4px solid #00000022;
+    padding: 2rem;
 }
 
 .prices-item h3{
     font-size: 2rem;
-    color: hsl(237, 80%, 38%);
+    color: #ffffff66;
     text-align: center;
-    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .prices-item span{
@@ -204,8 +205,8 @@ main {
     text-align: center;
     font-weight: bold;
     padding: 0.6rem 0 0.3rem 0;
-    border-top: 4px solid #fff;
-    border-bottom: 4px solid #fff;
+    border-top: 4px solid #00000022;
+    border-bottom: 4px solid #00000022;
 }
 
 .prices-item sup{
@@ -215,18 +216,18 @@ main {
 
 .prices-item ul{
     max-width: 300px;
-    margin: 1rem auto;
-    font-size: 1.25rem;
+    margin: 2rem auto;
     font-style: italic;
 }
 
 .prices-item li{
     display: flex;
+    color: #ffffff66;
     justify-content: space-between;
     align-items: center;
+    font-weight: 400;
+    font-size: 1rem;
     margin-bottom: 1rem;
-    font-size: 1.25rem;
-    font-weight: 500;
 }
 
 .prices-item li::after{
@@ -234,7 +235,7 @@ main {
     display: block;
     width: 0.25rem;
     height: 0.25rem;
-    background: #5898ff;
+    background: #66d9eb;
     border-radius: 50%;
 }
 
@@ -244,12 +245,20 @@ main {
     max-width: 300px;
     margin: 1rem auto;
     border: 4px solid;
+    color: #fff;
     padding: 1rem 0;
 
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
+
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.prices-item a:hover{
+    background-color: #fff;
+    color: #09003E;
 }
 
 /* ---------------------------- Footer --------------------------- */
